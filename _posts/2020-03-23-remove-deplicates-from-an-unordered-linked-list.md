@@ -12,7 +12,7 @@ tags: [算法,链表]
 原链表: 1->3->1->5->5->7
 移除后: 1->3->5->7
 思路很简单, 逐一遍历然后看后面的数据有没有重复的, 有就删除, 写一个简单的流程图:
-![头插反转链表法流程图](http://www.plantuml.com/plantuml/png/bPEnJiCm48PtFuN7-1NQWRuA4gaQAQG81o4sL9MY0gcA40omHaAjsb04WrkKFesl3c_1DHukWq7c9jloz_d-dDAHwU5fUdOSith1E5QhAbPGFaBv0EEikXcOmJg0_0csSpDv4y5kcKC-r6fZ5WkjBhMQspkGVK3-QTUxkskOtfldeTsATYq-xqLnoCdLV46hRA-SRGu4ZoGFBa8f4BBLWjK8HbUMGkHxzcwfgjYQia3GwMmx17J5Gu01jBgbaAIaC6Zr3KCLTItfUdH_NgpDYpBBiU1fBqmSWb-_2hND6drJJWimhw1KOImnQzB_HnFCOpRaJuwYBftyDJ6OJiph5-68rgDWJPAUT9D4oRH_mZgunN_W1m00)
+![从无序链表中移除重复项](http://www.plantuml.com/plantuml/png/bPEnJiCm48PtFuN7-1NQWRuA4gaQAQG81o4sL9MY0gcA40omHaAjsb04WrkKFesl3c_1DHukWq7c9jloz_d-dDAHwU5fUdOSith1E5QhAbPGFaBv0EEikXcOmJg0_0csSpDv4y5kcKC-r6fZ5WkjBhMQspkGVK3-QTUxkskOtfldeTsATYq-xqLnoCdLV46hRA-SRGu4ZoGFBa8f4BBLWjK8HbUMGkHxzcwfgjYQia3GwMmx17J5Gu01jBgbaAIaC6Zr3KCLTItfUdH_NgpDYpBBiU1fBqmSWb-_2hND6drJJWimhw1KOImnQzB_HnFCOpRaJuwYBftyDJ6OJiph5-68rgDWJPAUT9D4oRH_mZgunN_W1m00)
 
 流程图看起来比较绕, 直接看代码可能更清晰(MyList的定义参考: [Golang实现一个最简单的链表](http://blog.chive-chan.com/blog/2020/03/18/a-simple-list/)):
 

@@ -1,0 +1,36 @@
+@startuml AddLinkedList
+start
+	:接收链表参数h1, h2;
+	if (h1为空或者h1的内容为空) then (yes)
+		:返回h2;
+		stop
+	elseif (h2为空或者h2的内容为空) then (yes)
+		:返回h1;
+		stop
+	endif
+	:初始化进位数据c为零;
+	:创建新链表p用于记录结果;
+	:创建链表p1, p2用于遍历h1, h2;
+	while(p1或者p2不为空) is (yes)
+		:给p末尾添加新的结点;
+		:计算p1,p2当前结点数据
+		以及进位数据c的和sum;
+		:将p新结点的数据域设置为sum%10;
+		:将进位数据c设置为sum/10;
+		:将p1, p2后移;
+	endwhile
+	:将p1和p2较长链表剩余的结点记为p3;
+	while(p3不为空) is (yes)
+		:给p末尾添加新的结点;
+		:计算p3当前结点数据
+		与进位数据c的和sum;
+		:将p新结点的数据域设置为sum%10;
+		:将进位数据c设置为sum/10;
+		:将p3后移;
+	endwhile
+	if (进位数据c等于1) then (yes)
+		:给p末尾添加新的结点;
+		:将p新结点的数据域设置为1;
+	endif
+stop
+@enduml
